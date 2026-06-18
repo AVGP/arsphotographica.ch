@@ -1,0 +1,38 @@
+{{ define "main" }}
+
+<div style="max-width: var(--max-width); margin: 0 auto;">
+  <header style="margin-bottom: 4rem; text-align: center;">
+    <h1 style="text-transform: uppercase; letter-spacing: 0.05em; font-family: var(--font-serif);">Photographic Zines</h1>
+    <p class="hero-subtitle" style="font-size: 1.2rem; margin-top: 1rem; color: var(--accent); font-style: italic;">
+      Self-Published Photo Books & Art Booklets
+    </p>
+    <p style="max-width: 600px; margin: 1.5rem auto 0; color: var(--text-secondary); font-size: 1rem;">
+      A collection of self-published zines exploring specific photographic themes. Each publication features carefully curated layouts, custom print bindings, and limited run editions.
+    </p>
+  </header>
+
+  <div class="grid-container" style="margin-top: 3rem;">
+    {{ range (where .Site.RegularPages "Section" "zines") }}
+      <div class="grid-item">
+        <div class="grid-image-wrapper">
+          <a href="{{ .RelPermalink }}">
+            <img src="{{ .Params.image }}" alt="{{ .Title }}">
+          </a>
+        </div>
+        <div class="grid-info">
+          <span class="badge" style="background: rgba(212, 175, 55, 0.08); color: var(--accent);">{{ .Params.printing_method | default "Self-Published" }}</span>
+          <h3 style="margin-bottom: 0.5rem;"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+          <p style="font-size: 0.95rem; line-height: 1.4; margin-bottom: 1.5rem; flex-grow: 1;">{{ .Description | default (.Summary | truncate 120) }}</p>
+          <div class="grid-meta" style="margin-top: auto; border-top: 1px solid rgba(255, 255, 255, 0.05); padding-top: 0.75rem;">
+            <span>{{ .Params.pages }} pages ({{ .Params.dimensions }})</span>
+            <span style="color: var(--accent); font-weight: 600;">{{ .Params.price }}</span>
+          </div>
+        </div>
+      </div>
+    {{ else }}
+      <p style="grid-column: 1/-1; text-align: center; color: var(--text-muted); padding: 3rem;">No publications are currently in the catalog.</p>
+    {{ end }}
+  </div>
+</div>
+
+{{ end }}

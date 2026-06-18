@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="{{ site.LanguageCode | default "en-us" }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ if .IsHome }}{{ site.Title }}{{ else }}{{ .Title }} | {{ site.Title }}{{ end }}</title>
+  
+  <!-- SEO Metadata -->
+  <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ with site.Params.description }}{{ . }}{{ end }}{{ end }}">
+  <link rel="canonical" href="{{ .Permalink }}">
+  
+  <!-- Stylesheet -->
+  {{ $style := resources.Get "css/main.css" | resources.Minify }}
+  {{ if $style }}
+    <link rel="stylesheet" href="{{ $style.RelPermalink }}">
+  {{ end }}
+</head>
+<body>
+
+  <!-- Header Section -->
+  <header class="site-header">
+    <div class="nav-container">
+      <a href="/" class="brand">
+        {{ if site.Params.logo }}
+          <img src="{{ site.Params.logo }}" alt="{{ site.Title }} logo">
+        {{ end }}
+        <span class="brand-name">{{ site.Title }}</span>
+      </a>
+      
+      <nav aria-label="Main Navigation">
+        <ul class="nav-links">
+          {{ $currentPage := . }}
+          {{ range site.Menus.main }}
+            <li>
+              <a href="{{ .URL | relURL }}" 
+                 class="{{ if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }}active{{ end }}"
+                 title="{{ .Name }}">
+                {{ .Name }}
+              </a>
+            </li>
+          {{ end }}
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content Block -->
+  <main id="main-content">
+    {{ block "main" . }}{{ end }}
+  </main>
+
+  <!-- Footer Section -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-about">
+        <h4>{{ site.Title }}</h4>
+        <p>{{ site.Params.description }}</p>
+      </div>
+      <div class="footer-links">
+        <h5>Explore</h5>
+        <ul>
+          {{ range site.Menus.main }}
+            <li><a href="{{ .URL | relURL }}">{{ .Name }}</a></li>
+          {{ end }}
+        </ul>
+      </div>
+      <div class="footer-social">
+        <h5>Contact & Social</h5>
+        <p style="font-size: 0.95rem; margin-bottom: 0.75rem;">{{ site.Params.address }}</p>
+        <p style="font-size: 0.95rem; margin-bottom: 0.75rem;"><a href="mailto:{{ site.Params.email }}">{{ site.Params.email }}</a></p>
+        {{ if site.Params.instagram }}
+          <p style="font-size: 0.95rem; margin-bottom: 0.5rem;"><a href="{{ site.Params.instagram }}" target="_blank" rel="noopener">Instagram</a></p>
+        {{ end }}
+        {{ if site.Params.bluesky }}
+          <p style="font-size: 0.95rem; margin-bottom: 0.5rem;"><a href="{{ site.Params.bluesky }}" target="_blank" rel="noopener">Bluesky</a></p>
+        {{ end }}
+        {{ if site.Params.kofi }}
+          <p style="font-size: 0.95rem; margin-bottom: 0.5rem;"><a href="{{ site.Params.kofi }}" target="_blank" rel="noopener">Ko-fi Shop</a></p>
+        {{ end }}
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>&copy; {{ now.Format "2006" }} {{ site.Params.copyright }}. All rights reserved.</div>
+      <div>Website by Antigravity</div>
+    </div>
+  </footer>
+
+  <!-- Global Lightbox Modal -->
+  <dialog id="global-lightbox" class="lightbox">
+    <div class="lightbox-content">
+      <button class="close-lightbox" aria-label="Close lightbox">&times;</button>
+      <div class="lightbox-image-container">
+        <img src="" alt="Enlarged view">
+      </div>
+      <div class="lightbox-info">
+        <h3 class="lightbox-title">Image Title</h3>
+        <div class="lightbox-details">
+          <span><strong style="color: var(--accent);">Specs:</strong> <span class="lightbox-camera">Camera Info</span></span>
+          <span style="border-left: 1px solid var(--border-color); padding-left: 1.5rem;"><strong style="color: var(--accent);">Edition:</strong> <span class="lightbox-edition">Edition Info</span></span>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+  <!-- Lightbox Script (Used in Gallery and Portfolio pages) -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const lightbox = document.getElementById('global-lightbox');
+      if (!lightbox) return;
+
+      const lightboxImg = lightbox.querySelector('.lightbox-image-container img');
+      const lightboxTitle = lightbox.querySelector('.lightbox-title');
+      const lightboxCamera = lightbox.querySelector('.lightbox-camera');
+      const lightboxEdition = lightbox.querySelector('.lightbox-edition');
+      const closeBtn = lightbox.querySelector('.close-lightbox');
+
+      // Add click handler to all lightbox trigger images
+      document.querySelectorAll('[data-lightbox-src]').forEach(img => {
+        img.addEventListener('click', () => {
+          const src = img.getAttribute('data-lightbox-src');
+          const title = img.getAttribute('data-lightbox-title') || '';
+          const camera = img.getAttribute('data-lightbox-camera') || '';
+          const edition = img.getAttribute('data-lightbox-edition') || '';
+
+          if (lightboxImg) lightboxImg.src = src;
+          if (lightboxTitle) lightboxTitle.textContent = title;
+          
+          if (lightboxCamera) {
+            if (camera) {
+              lightboxCamera.textContent = camera;
+              lightboxCamera.parentElement.style.display = 'inline-flex';
+            } else {
+              lightboxCamera.parentElement.style.display = 'none';
+            }
+          }
+          
+          if (lightboxEdition) {
+            if (edition) {
+              lightboxEdition.textContent = edition;
+              lightboxEdition.parentElement.style.display = 'inline-flex';
+            } else {
+              lightboxEdition.parentElement.style.display = 'none';
+            }
+          }
+
+          lightbox.showModal();
+        });
+      });
+
+      // Close button handler
+      if (closeBtn) {
+        closeBtn.addEventListener('click', () => {
+          lightbox.close();
+        });
+      }
+
+      // Close when clicking backdrop
+      lightbox.addEventListener('click', (e) => {
+        if (e.target === lightbox) {
+          lightbox.close();
+        }
+      });
+      
+      // Clear image source on close to prevent visual glitch next open
+      lightbox.addEventListener('close', () => {
+        if (lightboxImg) lightboxImg.src = '';
+      });
+    });
+  </script>
+
+</body>
+</html>
