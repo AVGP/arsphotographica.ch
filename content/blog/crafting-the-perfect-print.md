@@ -3,7 +3,7 @@ title: "Crafting the Perfect Fine Art Print"
 description: "A look behind the scenes of our print studio in Zurich, exploring paper types, printer profiling, and print longevity."
 date: 2026-06-01T14:30:00Z
 author: "Ars Photographica"
-image: "/images/urban-geometry.png"
+image: "/images/gallery/concrete-lines/urban-geometry.png"
 layout: "single"
 ---
 
@@ -33,3 +33,4 @@ To ensure the print matches the artistic intent, a strict color-managed workflow
 Once printed, each piece is left to cure for 24 hours to allow the pigment solvents to evaporate completely. It is then inspected under a calibrated D50 light source for any micro-imperfections.
 
 Once approved, the print is signed and numbered on the lower white margin. A matching pair of serialized holographic labels is applied—one onto the back of the print, and the other onto the certificate of authenticity, finalizing the piece as a unique, certified collector's item.
+

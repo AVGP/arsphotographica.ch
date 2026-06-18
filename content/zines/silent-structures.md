@@ -1,7 +1,7 @@
 ---
 title: "Silent Structures"
 description: "A Risograph-printed photozine exploring architectural geometries and concrete shadows in Switzerland."
-image: "/images/zine-cover.png"
+image: "/images/zines/zine-cover.png"
 pages: 36
 dimensions: "14.8 x 21.0 cm (A5)"
 binding: "Saddle-stitched with custom black linen thread"
@@ -18,3 +18,4 @@ year: 2025
 To emphasize the raw, tactile quality of concrete, the book is printed using a Risograph duplicator on uncoated Munken papers. This printing technique introduces slight, organic variations in ink density and registration on each page, making every single copy in the edition unique.
 
 Each copy is hand-bound with black linen thread, numbered, and signed by the artist.
+

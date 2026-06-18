@@ -1,7 +1,7 @@
 ---
 title: "Alpine Silence"
 description: "A minimal, calm visual study of a solitary cabin in the snow-covered Swiss Alps, printed on heavyweight cotton rag."
-image: "/images/alpine-silence.png"
+image: "/images/gallery/alpine-light/alpine-silence.png"
 camera: "Hasselblad 503CW, Carl Zeiss Planar 80mm f/2.8, Fujifilm Velvia"
 dimensions: "60 x 60 cm (Image size)"
 price: "CHF 750"
@@ -19,3 +19,4 @@ Captured during the height of winter in the canton of Glarus, Switzerland. The h
 The composition is strictly centered, emphasizing the absolute isolation and silent dignity of the wooden shelter against the overwhelming scale of the Alpine mountains.
 
 Each print is individually signed and numbered by the artist on the lower border, and is accompanied by a Certificate of Authenticity with a serialized security hologram.
+

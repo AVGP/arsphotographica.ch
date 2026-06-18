@@ -1,7 +1,7 @@
 ---
 title: "About the Artist"
 description: "Learn more about the artistic philosophy, exhibition history, and meticulous printmaking process of Ars Photographica."
-image: "/images/hero-showcase.png"
+image: "/images/gallery/alpine-light/hero-showcase.png"
 layout: "single"
 ---
 
@@ -33,3 +33,4 @@ Every photograph presented in the portfolio is printed directly by the artist in
 - *The Swiss Photographic Journal*, Feature Interview (May 2025)
 - *Minimalist Eye*, Article: "The Geometry of Cities" (November 2023)
 - *Fine Art Print Quarterly*, Profile on Archival Giclée printing (February 2022)
+

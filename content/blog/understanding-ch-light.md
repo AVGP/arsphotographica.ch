@@ -3,7 +3,7 @@ title: "Understanding Alpine Light"
 description: "An essay on the atmospheric qualities of the Swiss Alps, winter shooting challenges, and the choice of analog medium-format film."
 date: 2026-05-12T10:00:00Z
 author: "Ars Photographica"
-image: "/images/alpine-silence.png"
+image: "/images/gallery/alpine-light/alpine-silence.png"
 layout: "single"
 ---
 
@@ -25,3 +25,4 @@ Working in sub-zero temperatures presents several technical challenges for photo
 3. **Film Brittleness**: In extreme cold, film becomes brittle and can easily snap when winding. The film must be advanced slowly and with steady pressure.
 
 The deliberate pace imposed by these constraints is not a hindrance—it is the core of the creative process. It forces the photographer to wait, to observe the slow shift of shadow and light, and to expose only when the alignment of elements is perfect.
+

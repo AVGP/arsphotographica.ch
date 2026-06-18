@@ -1,7 +1,7 @@
 ---
 title: "Urban Geometry"
 description: "A minimalist exploration of light, shadow, and raw concrete textures in contemporary architecture."
-image: "/images/urban-geometry.png"
+image: "/images/gallery/concrete-lines/urban-geometry.png"
 camera: "Leica M10-R, Leica Summilux 35mm f/1.4 ASPH"
 dimensions: "50 x 70 cm (Image size)"
 price: "CHF 650"
@@ -19,3 +19,4 @@ Shot in the early hours of a summer morning in Zurich West. This work captures t
 By focusing on abstract geometric segments, the image strips the building of its functional context, transforming structural concrete into a play of pure form, light, and dark.
 
 Each print is individually signed and numbered by the artist on the lower border, and is accompanied by a Certificate of Authenticity with a serialized security hologram.
+
