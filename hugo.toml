@@ -3,35 +3,35 @@ languageCode = 'en-us'
 title = 'Ars Photographica'
 
 [params]
-  description = 'Fine art photography and limited edition prints by Ars Photographica. Explore landscape, abstract, and monochrome collections.'
+  description = 'Fine art photography and prints by Ars Photographica. Explore landscape, abstract, and monochrome collections.'
   logo = '/images/logo.jpg'
   copyright = 'Ars Photographica'
   email = 'info@arsphotographica.ch'
   address = 'Zürich, Switzerland'
-  phone = '+41 44 123 45 67'
-  instagram = 'https://instagram.com/arsphotographica'
+#  phone = '+41 44 123 45 67'
+  instagram = 'https://instagram.com/arsphotographica.ch'
   bluesky = 'https://bsky.app/profile/arsphotographica.ch'
   kofi = 'https://ko-fi.com/arsphotographica'
 
-[[menus.main]]
-  name = 'Portfolio'
-  url = '/portfolio/'
-  weight = 10
+#[[menus.main]]
+#  name = 'Portfolio'
+#  url = '/portfolio/'
+#  weight = 10
 
-[[menus.main]]
-  name = 'Galleries'
-  url = '/gallery/'
-  weight = 20
+#[[menus.main]]
+#  name = 'Galleries'
+#  url = '/gallery/'
+#  weight = 20
 
 [[menus.main]]
   name = 'Zines'
   url = '/zines/'
   weight = 25
 
-[[menus.main]]
-  name = 'Blog'
-  url = '/blog/'
-  weight = 30
+#[[menus.main]]
+#  name = 'Blog'
+#  url = '/blog/'
+#  weight = 30
 
 [[menus.main]]
   name = 'About'
