@@ -4,7 +4,7 @@ description: "A large fine art print capturing the iconic Brighton Pier from a s
 image: "/images/portfolio/brighton-pier.jpg"
 camera: "DJI Mavic 3 Pro, Hasselblad 24mm equivalent lens, ISO 100"
 dimensions: "90 x 60 cm (Image size)"
-price: "CHF 1'100"
+price: "CHF 350"
 edition_size: 10
 edition_type: "Limited Edition"
 series: "Urban Geometry"
