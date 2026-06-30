@@ -13,11 +13,6 @@ layout: layouts/base.njk
     <a href="/portfolio/" class="btn btn-primary" style="flex: 1;">View Prints</a>
     <a href="/gallery/" class="btn btn-outline" style="flex: 1;">Explore Series</a>
   </div>
-  
-  <!-- Hero Image Showcase -->
-  <div class="hero-featured">
-    <img src="/images/gallery/alpine-light/hero-showcase.png" alt="Featured Fine Art Landscape Print">
-  </div>
 </section>
 
 <!-- Curated Prints (Portfolio Preview) -->
@@ -30,11 +25,17 @@ layout: layouts/base.njk
   <div class="grid-container">
     {% for item in collections.portfolio | reverse | limit(3) %}
       <div class="grid-item">
-        <div class="grid-image-wrapper">
-          <a href="{{ item.url }}">
-            <img src="{{ item.data.image }}" alt="{{ item.data.title }}">
-          </a>
-        </div>
+        {% if item.data.image %}
+          <div class="grid-image-wrapper">
+            <a href="{{ item.url }}">
+              <img src="{{ item.data.image }}" alt="{{ item.data.title }}">
+            </a>
+          </div>
+        {% else %}
+          <div class="grid-image-wrapper" style="background: var(--bg-tertiary); display: flex; justify-content: center; align-items: center; aspect-ratio: 1/1;">
+            <span style="color: var(--text-muted); font-size: 2rem; font-family: var(--font-serif);">Ars</span>
+          </div>
+        {% endif %}
         <div class="grid-info">
           <span class="badge">{{ item.data.edition_type | default("Limited Edition") }}</span>
           <h3 style="margin-bottom: 0.5rem;"><a href="{{ item.url }}">{{ item.data.title }}</a></h3>
@@ -61,11 +62,17 @@ layout: layouts/base.njk
   <div class="grid-container">
     {% for item in collections.gallery | reverse | limit(2) %}
       <div class="grid-item">
-        <div class="grid-image-wrapper">
-          <a href="{{ item.url }}">
-            <img src="{{ item.data.cover | default("/images/gallery/alpine-light/hero-showcase.png") }}" alt="{{ item.data.title }}">
-          </a>
-        </div>
+        {% if item.data.cover %}
+          <div class="grid-image-wrapper">
+            <a href="{{ item.url }}">
+              <img src="{{ item.data.cover }}" alt="{{ item.data.title }}">
+            </a>
+          </div>
+        {% else %}
+          <div class="grid-image-wrapper" style="background: var(--bg-tertiary); display: flex; justify-content: center; align-items: center; aspect-ratio: 1/1;">
+            <span style="color: var(--text-muted); font-size: 2rem; font-family: var(--font-serif);">Ars</span>
+          </div>
+        {% endif %}
         <div class="grid-info">
           <span class="badge" style="background: rgba(255, 255, 255, 0.05); color: var(--text-secondary);">Series</span>
           <h3><a href="{{ item.url }}">{{ item.data.title }}</a></h3>

@@ -5,15 +5,21 @@ layout: layouts/base.njk
   
   <!-- Left Side: Large Visual Showcase -->
   <div class="print-gallery">
-    <img src="{{ image }}" alt="{{ title }}" class="print-main-img" 
-         data-lightbox-src="{{ image }}" 
-         data-lightbox-title="{{ title }}"
-         data-lightbox-camera="{{ camera }}"
-         data-lightbox-edition="Limited Edition of {{ edition_size }}"
-         style="cursor: zoom-in;">
-    <p style="text-align: center; color: var(--text-muted); font-size: 0.85rem; margin-top: 1rem; font-style: italic;">
-      Click image to view in full resolution
-    </p>
+    {% if image %}
+      <img src="{{ image }}" alt="{{ title }}" class="print-main-img" 
+           data-lightbox-src="{{ image }}" 
+           data-lightbox-title="{{ title }}"
+           data-lightbox-camera="{{ camera }}"
+           data-lightbox-edition="Limited Edition of {{ edition_size }}"
+           style="cursor: zoom-in;">
+      <p style="text-align: center; color: var(--text-muted); font-size: 0.85rem; margin-top: 1rem; font-style: italic;">
+        Click image to view in full resolution
+      </p>
+    {% else %}
+      <div style="background: var(--bg-tertiary); display: flex; justify-content: center; align-items: center; aspect-ratio: 1/1; border-radius: 4px; border: 1px solid var(--border-color); width: 100%; min-height: 350px;">
+        <span style="color: var(--text-muted); font-size: 3rem; font-family: var(--font-serif);">Ars</span>
+      </div>
+    {% endif %}
   </div>
 
   <!-- Right Side: Details and Print Inquiry -->

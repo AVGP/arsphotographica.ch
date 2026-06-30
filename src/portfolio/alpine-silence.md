@@ -1,7 +1,6 @@
 ---
 title: "Alpine Silence"
 description: "A minimal, calm visual study of a solitary cabin in the snow-covered Swiss Alps, printed on heavyweight cotton rag."
-image: "/images/gallery/alpine-light/alpine-silence.png"
 camera: "Hasselblad 503CW, Carl Zeiss Planar 80mm f/2.8, Fujifilm Velvia"
 dimensions: "60 x 60 cm (Image size)"
 price: "CHF 750"

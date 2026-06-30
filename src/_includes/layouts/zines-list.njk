@@ -15,11 +15,17 @@ layout: layouts/base.njk
   <div class="grid-container" style="margin-top: 3rem;">
     {% for item in collections.zines %}
       <div class="grid-item">
-        <div class="grid-image-wrapper">
-          <a href="{{ item.url }}">
-            <img src="{{ item.data.image }}" alt="{{ item.data.title }}">
-          </a>
-        </div>
+        {% if item.data.image %}
+          <div class="grid-image-wrapper">
+            <a href="{{ item.url }}">
+              <img src="{{ item.data.image }}" alt="{{ item.data.title }}">
+            </a>
+          </div>
+        {% else %}
+          <div class="grid-image-wrapper" style="background: var(--bg-tertiary); display: flex; justify-content: center; align-items: center; aspect-ratio: 1/1.414;">
+            <span style="color: var(--text-muted); font-size: 2rem; font-family: var(--font-serif);">Ars</span>
+          </div>
+        {% endif %}
         <div class="grid-info">
           <span class="badge" style="background: rgba(212, 175, 55, 0.08); color: var(--accent);">{{ item.data.printing_method | default("Self-Published") }}</span>
           <h3 style="margin-bottom: 0.5rem;"><a href="{{ item.url }}">{{ item.data.title }}</a></h3>

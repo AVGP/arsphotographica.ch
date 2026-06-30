@@ -1,7 +1,6 @@
 ---
 title: "Urban Geometry"
 description: "A minimalist exploration of light, shadow, and raw concrete textures in contemporary architecture."
-image: "/images/gallery/concrete-lines/urban-geometry.png"
 camera: "Leica M10-R, Leica Summilux 35mm f/1.4 ASPH"
 dimensions: "50 x 70 cm (Image size)"
 price: "CHF 650"

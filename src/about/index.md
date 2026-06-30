@@ -1,7 +1,6 @@
 ---
 title: "About the Artist"
 description: "Learn more about the artistic philosophy, exhibition history, and meticulous printmaking process of Martin Splitt."
-image: "/images/gallery/alpine-light/hero-showcase.png"
 layout: "layouts/page.njk"
 ---
 

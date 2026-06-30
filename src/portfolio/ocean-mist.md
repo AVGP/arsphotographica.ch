@@ -1,7 +1,6 @@
 ---
 title: "Ocean Mist"
 description: "A long-exposure monochrome seascape capturing the ethereal movement of water around coastal rocks."
-image: "/images/gallery/silent-coastlines/ocean-mist.png"
 camera: "Hasselblad H6D-100c, Carl Zeiss 35-90mm, 10-stop Neutral Density Filter"
 dimensions: "80 x 60 cm (Image size)"
 price: "CHF 950"

@@ -12,11 +12,17 @@ layout: layouts/base.njk
   <div class="grid-container" style="margin-top: 3rem;">
     {% for item in collections.gallery %}
       <div class="grid-item">
-        <div class="grid-image-wrapper">
-          <a href="{{ item.url }}">
-            <img src="{{ item.data.cover | default("/images/gallery/alpine-light/hero-showcase.png") }}" alt="{{ item.data.title }}">
-          </a>
-        </div>
+        {% if item.data.cover %}
+          <div class="grid-image-wrapper">
+            <a href="{{ item.url }}">
+              <img src="{{ item.data.cover }}" alt="{{ item.data.title }}">
+            </a>
+          </div>
+        {% else %}
+          <div class="grid-image-wrapper" style="background: var(--bg-tertiary); display: flex; justify-content: center; align-items: center; aspect-ratio: 1/1;">
+            <span style="color: var(--text-muted); font-size: 2rem; font-family: var(--font-serif);">Ars</span>
+          </div>
+        {% endif %}
         <div class="grid-info">
           <span class="badge" style="background: rgba(255, 255, 255, 0.05); color: var(--text-secondary);">Series</span>
           <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem;"><a href="{{ item.url }}">{{ item.data.title }}</a></h3>

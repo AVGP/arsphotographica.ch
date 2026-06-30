@@ -1,7 +1,6 @@
 ---
 title: "Silent Structures"
 description: "A Risograph-printed photozine exploring architectural geometries and concrete shadows in Switzerland."
-image: "/images/zines/zine-cover.png"
 pages: 36
 dimensions: "14.8 x 21.0 cm (A5)"
 binding: "Saddle-stitched with custom black linen thread"
