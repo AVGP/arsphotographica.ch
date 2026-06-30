@@ -3,6 +3,9 @@
 /resources/_gen/
 .hugo_build.lock
 
+# Node.js
+node_modules/
+
 # Operating System files
 Thumbs.db
 Desktop.ini

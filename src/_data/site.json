@@ -1,0 +1,29 @@
+{
+  "url": "https://arsphotographica.ch",
+  "title": "Ars Photographica",
+  "description": "Fine art photography and prints by Ars Photographica. Explore landscape, abstract, and monochrome collections.",
+  "logo": "/images/logo.jpg",
+  "copyright": "Ars Photographica",
+  "email": "info@arsphotographica.ch",
+  "address": "Zürich, Switzerland",
+  "instagram": "https://instagram.com/arsphotographica.ch",
+  "bluesky": "https://bsky.app/profile/arsphotographica.ch",
+  "kofi": "https://ko-fi.com/arsphotographica",
+  "menu": [
+    {
+      "name": "Zines",
+      "url": "/zines/",
+      "weight": 25
+    },
+    {
+      "name": "About",
+      "url": "/about/",
+      "weight": 40
+    },
+    {
+      "name": "Contact",
+      "url": "/contact/",
+      "weight": 50
+    }
+  ]
+}

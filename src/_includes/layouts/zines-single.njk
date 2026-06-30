@@ -1,0 +1,81 @@
+---
+layout: layouts/base.njk
+---
+<div class="print-detail-container" style="max-width: var(--max-width); margin: 0 auto;">
+  
+  <!-- Left Side: Zine Cover Showcase -->
+  <div class="print-gallery">
+    <img src="{{ image }}" alt="{{ title }}" class="print-main-img" 
+         data-lightbox-src="{{ image }}" 
+         data-lightbox-title="{{ title }} Cover"
+         data-lightbox-camera="Zine Publication ({{ year }})"
+         data-lightbox-edition="Limited Run of {{ edition_size }}"
+         style="cursor: zoom-in; aspect-ratio: 1/1.414; object-fit: cover;">
+    <p style="text-align: center; color: var(--text-muted); font-size: 0.85rem; margin-top: 1rem; font-style: italic;">
+      Click image to view in full size
+    </p>
+  </div>
+
+  <!-- Right Side: Details and Print Inquiry -->
+  <div class="print-meta-box">
+    <span class="badge" style="margin-bottom: 0.5rem; background: rgba(212, 175, 55, 0.08); color: var(--accent);">Zine</span>
+    <h1 class="print-title" style="font-family: var(--font-serif); font-size: 2.5rem; font-weight: 300;">{{ title }}</h1>
+    <p class="print-tagline">Published in {{ year }}</p>
+    
+    <div style="color: var(--text-secondary); margin-bottom: 2rem; line-height: 1.7;">
+      {{ content | safe }}
+    </div>
+
+    <h3 style="font-size: 1.1rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--accent); margin-bottom: 1rem; font-family: var(--font-sans); font-weight: 600;">
+      Publication Specifications
+    </h3>
+    
+    <ul class="print-specs-list">
+      <li>
+        <span>Pages</span>
+        <span>{{ pages | default("32") }} pages</span>
+      </li>
+      <li>
+        <span>Dimensions</span>
+        <span>{{ dimensions | default("A5 (14.8 x 21.0 cm)") }}</span>
+      </li>
+      <li>
+        <span>Binding</span>
+        <span>{{ binding | default("Saddle-stitched (Stapled)") }}</span>
+      </li>
+      <li>
+        <span>Paper (Inside)</span>
+        <span>{{ paper_inside | default("120gsm uncoated recycled paper") }}</span>
+      </li>
+      <li>
+        <span>Paper (Cover)</span>
+        <span>{{ paper_cover | default("250gsm textured cardstock") }}</span>
+      </li>
+      <li>
+        <span>Printing</span>
+        <span>{{ printing_method | default("Risograph") }}</span>
+      </li>
+      <li>
+        <span>Edition Run</span>
+        <span>Limited to {{ edition_size | default("100") }} numbered copies</span>
+      </li>
+    </ul>
+
+    <div class="print-price">
+      {{ price }}
+      <span style="font-size: 0.85rem; color: var(--text-muted); display: block; font-family: var(--font-sans); font-weight: normal; margin-top: 0.25rem;">
+        Excl. shipping. Individually signed and numbered.
+      </span>
+    </div>
+
+    <!-- Inquiry Link with Query Parameter -->
+    <a href="/contact/?print={{ title | urlencode }}" class="btn btn-primary">
+      Acquire This Zine
+    </a>
+  </div>
+  
+</div>
+
+<div style="margin-top: 5rem; text-align: center; border-top: 1px solid var(--border-color); padding-top: 3rem;">
+  <a href="/zines/" class="btn btn-outline" style="max-width: 300px;">&larr; Back to Publications</a>
+</div>

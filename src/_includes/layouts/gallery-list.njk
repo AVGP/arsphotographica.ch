@@ -1,0 +1,34 @@
+---
+layout: layouts/base.njk
+---
+<div style="max-width: var(--max-width); margin: 0 auto;">
+  <header style="margin-bottom: 4rem; text-align: center;">
+    <h1 style="text-transform: uppercase; letter-spacing: 0.05em; font-family: var(--font-serif);">{{ title }}</h1>
+    <p class="hero-subtitle" style="font-size: 1.2rem; margin-top: 1rem; font-style: italic; color: var(--accent);">
+      {{ description }}
+    </p>
+  </header>
+
+  <div class="grid-container" style="margin-top: 3rem;">
+    {% for item in collections.gallery %}
+      <div class="grid-item">
+        <div class="grid-image-wrapper">
+          <a href="{{ item.url }}">
+            <img src="{{ item.data.cover | default("/images/gallery/alpine-light/hero-showcase.png") }}" alt="{{ item.data.title }}">
+          </a>
+        </div>
+        <div class="grid-info">
+          <span class="badge" style="background: rgba(255, 255, 255, 0.05); color: var(--text-secondary);">Series</span>
+          <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem;"><a href="{{ item.url }}">{{ item.data.title }}</a></h3>
+          <p style="font-size: 0.95rem; line-height: 1.4; margin-bottom: 1.5rem;">{{ item.data.description }}</p>
+          <div class="grid-meta" style="margin-top: auto; border-top: 1px solid rgba(255, 255, 255, 0.05); padding-top: 0.75rem;">
+            <span>{{ item.data.photo_count | default("Selected Works") }}</span>
+            <span>{{ item.data.year }}</span>
+          </div>
+        </div>
+      </div>
+    {% else %}
+      <p style="grid-column: 1/-1; text-align: center; color: var(--text-muted); padding: 3rem;">No photographic series are currently published.</p>
+    {% endfor %}
+  </div>
+</div>

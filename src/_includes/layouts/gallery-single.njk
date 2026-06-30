@@ -1,0 +1,45 @@
+---
+layout: layouts/base.njk
+---
+<div style="max-width: var(--max-width); margin: 0 auto;">
+  <header style="margin-bottom: 4rem; text-align: center;">
+    <span class="badge" style="margin-bottom: 1rem;">Series ({{ year }})</span>
+    <h1 style="font-family: var(--font-serif); font-weight: 300; margin-bottom: 1.5rem; text-transform: uppercase; letter-spacing: 0.05em;">{{ title }}</h1>
+    <div style="max-width: 700px; margin: 0 auto;">
+      <p style="font-size: 1.1rem; line-height: 1.7; color: var(--text-secondary);">{{ description }}</p>
+      {% if content %}
+        <div class="post-body" style="margin-top: 2rem; font-size: 1rem; color: var(--text-muted); text-align: left;">
+          {{ content | safe }}
+        </div>
+      {% endif %}
+    </div>
+  </header>
+
+  <!-- Gallery Grid -->
+  <div class="grid-container" style="margin-top: 3rem;">
+    {% for img in images %}
+      <div class="grid-item" style="cursor: pointer;">
+        <div class="grid-image-wrapper" style="aspect-ratio: 1/1;">
+          <img src="{{ img.src }}" 
+               alt="{{ img.title }}"
+               data-lightbox-src="{{ img.src }}"
+               data-lightbox-title="{{ img.title }}"
+               data-lightbox-camera="{{ img.camera }}"
+               data-lightbox-edition="{{ img.edition }}">
+        </div>
+        <div class="grid-info" style="padding: 1rem 1.25rem;">
+          <h4 style="font-family: var(--font-serif); font-size: 1.25rem; margin-bottom: 0.25rem;">{{ img.title }}</h4>
+          <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
+            {{ img.camera }}
+          </p>
+        </div>
+      </div>
+    {% else %}
+      <p style="grid-column: 1/-1; text-align: center; color: var(--text-muted); padding: 3rem;">No images in this series yet.</p>
+    {% endfor %}
+  </div>
+
+  <div style="margin-top: 5rem; text-align: center; border-top: 1px solid var(--border-color); padding-top: 3rem;">
+    <a href="/gallery/" class="btn btn-outline" style="max-width: 300px;">&larr; Back to All Series</a>
+  </div>
+</div>

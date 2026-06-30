@@ -1,0 +1,107 @@
+---
+layout: layouts/base.njk
+---
+
+<!-- Hero Section -->
+<section class="hero">
+  <h1>Ars Photographica</h1>
+  <p class="hero-subtitle">Fine Art Prints & Photographic Series</p>
+  <p style="max-width: 600px; margin: 0 auto 2rem; text-align: center;">
+    Capturing the silent dialogue between light, texture, and time. Each piece is meticulously printed on museum-grade archival media, produced in limited editions, and signed by the artist.
+  </p>
+  <div style="display: flex; gap: 1rem; justify-content: center; width: 100%; max-width: 400px; margin: 0 auto;">
+    <a href="/portfolio/" class="btn btn-primary" style="flex: 1;">View Prints</a>
+    <a href="/gallery/" class="btn btn-outline" style="flex: 1;">Explore Series</a>
+  </div>
+  
+  <!-- Hero Image Showcase -->
+  <div class="hero-featured">
+    <img src="/images/gallery/alpine-light/hero-showcase.png" alt="Featured Fine Art Landscape Print">
+  </div>
+</section>
+
+<!-- Curated Prints (Portfolio Preview) -->
+<section style="margin-bottom: 5rem;">
+  <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 2rem; border-bottom: 1px solid var(--border-color); padding-bottom: 1rem;">
+    <h2 style="margin-bottom: 0;">Featured Fine Art Prints</h2>
+    <a href="/portfolio/" style="color: var(--accent); font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.1em;">View All Prints &rarr;</a>
+  </div>
+  
+  <div class="grid-container">
+    {% for item in collections.portfolio | reverse | limit(3) %}
+      <div class="grid-item">
+        <div class="grid-image-wrapper">
+          <a href="{{ item.url }}">
+            <img src="{{ item.data.image }}" alt="{{ item.data.title }}">
+          </a>
+        </div>
+        <div class="grid-info">
+          <span class="badge">{{ item.data.edition_type | default("Limited Edition") }}</span>
+          <h3 style="margin-bottom: 0.5rem;"><a href="{{ item.url }}">{{ item.data.title }}</a></h3>
+          <p style="font-size: 0.95rem; line-height: 1.4; margin-bottom: 1.5rem;">{{ item.data.description | truncate(100) }}</p>
+          <div class="grid-meta">
+            <span>{{ item.data.dimensions }}</span>
+            <span style="color: var(--accent); font-weight: 600;">{{ item.data.price }}</span>
+          </div>
+        </div>
+      </div>
+    {% else %}
+      <p>No featured prints available at the moment.</p>
+    {% endfor %}
+  </div>
+</section>
+
+<!-- Photographic Galleries (Galleries Preview) -->
+<section style="margin-bottom: 5rem;">
+  <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 2rem; border-bottom: 1px solid var(--border-color); padding-bottom: 1rem;">
+    <h2 style="margin-bottom: 0;">Photographic Series</h2>
+    <a href="/gallery/" style="color: var(--accent); font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.1em;">View All Series &rarr;</a>
+  </div>
+  
+  <div class="grid-container">
+    {% for item in collections.gallery | reverse | limit(2) %}
+      <div class="grid-item">
+        <div class="grid-image-wrapper">
+          <a href="{{ item.url }}">
+            <img src="{{ item.data.cover | default("/images/gallery/alpine-light/hero-showcase.png") }}" alt="{{ item.data.title }}">
+          </a>
+        </div>
+        <div class="grid-info">
+          <span class="badge" style="background: rgba(255, 255, 255, 0.05); color: var(--text-secondary);">Series</span>
+          <h3><a href="{{ item.url }}">{{ item.data.title }}</a></h3>
+          <p style="font-size: 0.95rem; line-height: 1.4; margin-bottom: 1rem;">{{ item.data.description | truncate(100) }}</p>
+          <div class="grid-meta">
+            <span>{{ item.data.photo_count | default("Selected Works") }}</span>
+            <span>{{ item.data.year }}</span>
+          </div>
+        </div>
+      </div>
+    {% else %}
+      <p>No featured series available.</p>
+    {% endfor %}
+  </div>
+</section>
+
+<!-- Latest Blog / Process Journal -->
+<section style="margin-bottom: 2rem;">
+  <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 2rem; border-bottom: 1px solid var(--border-color); padding-bottom: 1rem;">
+    <h2 style="margin-bottom: 0;">Process Journal</h2>
+    <a href="/blog/" style="color: var(--accent); font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.1em;">Read Journal &rarr;</a>
+  </div>
+
+  {% for item in collections.blog | reverse | limit(1) %}
+    <div class="blog-card" style="margin-bottom: 0;">
+      {% if item.data.image %}
+        <img class="blog-card-img" src="{{ item.data.image }}" alt="{{ item.data.title }}">
+      {% endif %}
+      <div class="blog-card-content">
+        <div class="blog-date">{{ item.date | postDate }}</div>
+        <h3><a href="{{ item.url }}">{{ item.data.title }}</a></h3>
+        <p>{{ item.data.description | default(item.templateContent | truncate(180)) }}</p>
+        <a href="{{ item.url }}" class="read-more-link">Read Entry &rarr;</a>
+      </div>
+    </div>
+  {% else %}
+    <p>No journal entries available.</p>
+  {% endfor %}
+</section>

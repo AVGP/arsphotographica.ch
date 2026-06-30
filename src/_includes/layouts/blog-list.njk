@@ -1,0 +1,33 @@
+---
+layout: layouts/base.njk
+---
+<div class="single-page-content" style="max-width: 900px;">
+  <header style="margin-bottom: 4rem; text-align: center;">
+    <h1 style="text-transform: uppercase; letter-spacing: 0.05em; font-family: var(--font-serif);">{{ title }}</h1>
+    {% if description %}
+      <p class="hero-subtitle" style="font-size: 1.2rem; margin-top: 1rem;">{{ description }}</p>
+    {% endif %}
+  </header>
+
+  <div style="margin-top: 2rem;">
+    {% for item in collections.blog | reverse %}
+      <article class="blog-card">
+        {% if item.data.image %}
+          <img class="blog-card-img" src="{{ item.data.image }}" alt="{{ item.data.title }}">
+        {% else %}
+          <div style="background: var(--bg-tertiary); width: 100%; height: 200px; display: flex; justify-content: center; align-items: center; border-radius: 2px;">
+            <span style="color: var(--text-muted); font-size: 2rem; font-family: var(--font-serif);">Ars</span>
+          </div>
+        {% endif %}
+        <div class="blog-card-content">
+          <div class="blog-date">{{ item.date | postDate }}</div>
+          <h3 style="margin-top: 0; font-size: 1.6rem;"><a href="{{ item.url }}">{{ item.data.title }}</a></h3>
+          <p style="font-size: 0.95rem; line-height: 1.5; margin-bottom: 1.5rem;">{{ item.data.description }}</p>
+          <a href="{{ item.url }}" class="read-more-link">Read Entry &rarr;</a>
+        </div>
+      </article>
+    {% else %}
+      <p style="text-align: center; color: var(--text-muted);">No entries found in this section.</p>
+    {% endfor %}
+  </div>
+</div>
