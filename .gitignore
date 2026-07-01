@@ -5,6 +5,7 @@
 
 # Node.js
 node_modules/
+/.node/
 
 # Operating System files
 Thumbs.db
