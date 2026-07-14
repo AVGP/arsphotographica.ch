@@ -8,7 +8,7 @@ paper_inside: "Matte copy paper, 120 g/m2"
 paper_cover: "250gsm textured cardstock"
 printing_method: "Digital Color Print"
 edition_size: 100
-price: "$10"
+price: "$5"
 year: 2026
 image: "/images/buenos-aires-on-film.jpg"
 video: "https://www.youtube.com/watch?v=08LtcNtPN8Y&list=PLVqpKk7ob1yE"
