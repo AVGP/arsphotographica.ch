@@ -8,7 +8,7 @@ paper_inside: "Matte copy paper, 120 g/m2"
 paper_cover: "Self-cover (folded single sheet)"
 printing_method: "Digital Color Print"
 edition_size: 150
-price: "$5"
+price: "$2"
 year: 2026
 image: "/images/aw-snap.jpg"
 video: "https://www.youtube.com/watch?v=49U9XWdOekE&list=PLVqpKk7ob1yE"
