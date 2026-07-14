@@ -8,6 +8,7 @@ layout: "layouts/page.njk"
 
 Martin Splitt is a photographer and print artist from Zurich, Switzerland.
 He works with old film cameras as well as digital photography and loves to capture emotions and moments through light, shadow and color.
+
 He enjoys the freedom of zines as he plays with riso, screen printing and cyanotypes in his work.
 
 ## Who am I?
@@ -21,7 +22,9 @@ and the process of bringing that captured moment onto paper - through darkroom p
 ## Photography
 
 I enjoy using old analog cameras as well as digital photography - for me they are all tools to express something artistically. But don't get me wrong -
-I believe the tool leaves something in each picture that other tools don't. EAch camera is a bit different - large format cameras that slow you down,
+I believe the tool leaves something in each picture that other tools don't. 
+
+Each camera is a bit different - large format cameras that slow you down,
 quirky cameras from the last century that make you do all the thinking and cameras with lenses that leave their character in each picture. It's a beautiful world of experimentation, emotion and technique.
 
 ## Printing
@@ -36,5 +39,7 @@ It's brilliant to hold a physical representation of a photo and share it with ot
 ## Zines
 
 I love zines. I have [made a few zines myself](/zines). I love the community, the open-mindedness when it comes to formats, production and printing methods.
+
 I love telling stories with my photos and zines allow me to share them broadly and widely with many people - I can take a zine through the whole process from idea to layout to printing to handing them out myself.
+
 No permissions, no corporations, just my ideas, some paper and ink, maybe some staples and off we go!
