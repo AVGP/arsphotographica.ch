@@ -870,3 +870,130 @@ footer {
     height: 250px;
   }
 }
+
+/* Awards & Exhibitions Section */
+.awards-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  margin-top: 2.5rem;
+}
+
+.award-item {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-left: 3px solid var(--accent);
+  padding: 1.75rem;
+  border-radius: 4px;
+  transition: var(--transition-smooth);
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.award-item:hover {
+  transform: translateX(6px);
+  border-color: rgba(var(--accent-rgb), 0.3);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+}
+
+.award-image-container {
+  position: relative;
+  flex-shrink: 0;
+  width: 120px;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.35);
+  transition: var(--transition-smooth);
+  cursor: zoom-in;
+  background-color: var(--bg-primary);
+}
+
+.award-image-container::after {
+  content: '+';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(10, 10, 12, 0.65);
+  color: var(--accent);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.2rem;
+  font-weight: 300;
+  opacity: 0;
+  transition: var(--transition-smooth);
+  pointer-events: none;
+}
+
+.award-image-container:hover::after {
+  opacity: 1;
+}
+
+.award-image-container img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: var(--transition-smooth);
+}
+
+.award-image-container:hover img {
+  transform: scale(1.04);
+}
+
+.award-image-container:hover {
+  border-color: var(--accent);
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.5);
+}
+
+.award-content {
+  flex-grow: 1;
+}
+
+.award-date {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.award-title {
+  font-family: var(--font-serif);
+  font-size: 1.4rem;
+  color: var(--text-primary);
+  margin-bottom: 0.25rem;
+  line-height: 1.3;
+}
+
+.award-contest {
+  font-size: 0.95rem;
+  color: var(--accent);
+  font-style: italic;
+  margin-bottom: 0.75rem;
+}
+
+.award-desc {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 0 !important;
+}
+
+@media (max-width: 600px) {
+  .award-item {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 1.5rem;
+    gap: 1.5rem;
+  }
+  .award-image-container {
+    width: 145px;
+  }
+}
+

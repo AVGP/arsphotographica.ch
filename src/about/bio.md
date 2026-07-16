@@ -4,12 +4,19 @@ description: "Learn more about the artist - Martin Splitt."
 layout: "layouts/page.njk"
 ---
 
-## TL;DR
+<div style="display: flex; gap: 3rem; flex-wrap: wrap; margin-bottom: 3rem; align-items: flex-start;">
+  <div style="flex: 1 1 250px; max-width: 320px; margin: 0 auto; display: flex; flex-direction: column; gap: 0.75rem; align-items: center;">
+    <img src="/images/about-self-portrait.jpg" alt="self-portrait of Martin Splitt on 6x6 Kentmere 100, shot with a Meopta Flexaret VI" style="width: 100%; height: auto; border: 1px solid var(--border-color); border-radius: 4px; box-shadow: 0 8px 30px rgba(0,0,0,0.4); display: block;">
+    <p style="font-size: 0.8rem; color: var(--text-muted); line-height: 1.4; text-align: center; margin: 0.25rem 0 0 0 !important; font-style: italic;">self-portrait of Martin Splitt on 6x6 Kentmere 100, shot with a Meopta Flexaret VI</p>
+  </div>
+  <div style="flex: 2 1 400px; margin-top: 0;">
+    <h2 style="margin-top: 0; margin-bottom: 1.5rem;">TL;DR</h2>
+    
+    Martin Splitt is a photographer and print artist from Zurich, Switzerland. He works with old film cameras as well as digital photography and loves to capture emotions and moments through light, shadow and color.
 
-Martin Splitt is a photographer and print artist from Zurich, Switzerland.
-He works with old film cameras as well as digital photography and loves to capture emotions and moments through light, shadow and color.
-
-He enjoys the freedom of zines as he plays with riso, screen printing and cyanotypes in his work.
+    He enjoys the freedom of zines as he plays with riso, screen printing and cyanotypes in his work.
+  </div>
+</div>
 
 ## Who am I?
 
