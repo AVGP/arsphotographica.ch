@@ -4,8 +4,8 @@ description: "A photo zine exploring the unique wall art culture and the changes
 pages: 12
 dimensions: "14.8 x 21.0 cm (A5)"
 binding: "Saddle-stitched"
-paper_inside: "Matte copy paper, 120 g/m2"
-paper_cover: "250gsm textured cardstock"
+paper_inside: "Clairefontaine 1844 DCP 120 g/m2"
+format: "A5 zine"
 printing_method: "Digital Color Print"
 edition_size: 100
 price: "$5"
