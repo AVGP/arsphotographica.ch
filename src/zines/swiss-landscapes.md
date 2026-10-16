@@ -7,7 +7,7 @@ binding: "Single-sheet fold"
 paper_inside: "Clairefontaine 1844 DCP 120 g/m2"
 format: "Single-sheet mini zine"
 printing_method: "Digital Color Print"
-edition_size: 150
+edition_size: 25
 price: "$2"
 year: 2026
 image: "/images/zines/swiss-landscapes.jpg"

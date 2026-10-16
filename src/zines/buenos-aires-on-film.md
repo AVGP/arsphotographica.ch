@@ -7,7 +7,7 @@ binding: "Saddle-stitched"
 paper_inside: "Clairefontaine 1844 DCP 120 g/m2"
 format: "A5 zine"
 printing_method: "Digital Color Print"
-edition_size: 100
+edition_size: 25
 price: "$5"
 year: 2026
 image: "/images/zines/buenos-aires-on-film.jpg"
