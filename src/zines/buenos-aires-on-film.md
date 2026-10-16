@@ -10,7 +10,7 @@ printing_method: "Digital Color Print"
 edition_size: 100
 price: "$5"
 year: 2026
-image: "/images/buenos-aires-on-film.jpg"
+image: "/images/zines/buenos-aires-on-film.jpg"
 video: "https://www.youtube.com/watch?v=08LtcNtPN8Y&list=PLVqpKk7ob1yE"
 ---
 

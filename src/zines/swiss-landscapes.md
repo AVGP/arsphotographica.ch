@@ -1,5 +1,5 @@
 ---
-title: "Landscapes"
+title: "Swiss Landscapes"
 description: "An 8-page A7 mini photo zine with analog photographs and texts exploring the facets of the Swiss landscape."
 pages: 8
 dimensions: "7.4 x 10.5 cm (A7)"
@@ -10,7 +10,7 @@ printing_method: "Digital Color Print"
 edition_size: 150
 price: "$2"
 year: 2026
-image: "/images/landscapes.jpg"
+image: "/images/zines/swiss-landscapes.jpg"
 video: "https://www.youtube.com/watch?v=iRjk-oxBJL0&list=PLVqpKk7ob1yE&index=3&pp=iAQBsAgC"
 ---
 

@@ -10,7 +10,7 @@ printing_method: "Digital Color Print"
 edition_size: 150
 price: "$2"
 year: 2026
-image: "/images/aw-snap.jpg"
+image: "/images/zines/aw-snap.jpg"
 video: "https://www.youtube.com/watch?v=49U9XWdOekE&list=PLVqpKk7ob1yE"
 ---
 
