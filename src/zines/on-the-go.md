@@ -10,7 +10,7 @@ printing_method: "Digital Color Print"
 edition_size: 150
 price: "$2"
 year: 2026
-image: "/images/on-the-go.jpg"
+image: "/images/zines/on-the-go.jpg"
 video: "https://www.youtube.com/watch?v=Vw3yv5lN_bA&list=PLVqpKk7ob1yE&index=2&pp=iAQBsAgC"
 ---
 
