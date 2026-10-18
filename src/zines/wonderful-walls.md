@@ -8,7 +8,7 @@ paper_inside: "Lessebo Rough Ivory 100 g/m2"
 format: "Single-sheet zine"
 printing_method: "4-color Riso print"
 edition_size: 25
-price: "$5"
+price: "$10"
 year: 2026
 image: "/images/zines/wonderful-walls.jpg"
 ---
