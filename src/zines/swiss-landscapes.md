@@ -14,6 +14,6 @@ image: "/images/zines/swiss-landscapes.jpg"
 video: "https://www.youtube.com/watch?v=iRjk-oxBJL0&list=PLVqpKk7ob1yE&index=3&pp=iAQBsAgC"
 ---
 
-*Landscapes* is an 8-page A7 mini photo zine featuring analog photographs and brief texts exploring the facets of the Swiss landscape.
+*Swiss Landscapes* is an 8-page A7 mini photo zine featuring photographs and brief texts exploring the facets of the Swiss landscape.
 
-This publication showcases Zermatt's iconic Matterhorn and other alpine terrains, captured on film with their characteristic textures and tones. Paired with personal reflections, *Landscapes* presents a compact, artistic journey through the mountains, valleys, and open skies of Switzerland.
+This publication showcases the different types of Swiss landscapes, from the alps to the lakes. Paired with a story on the relationship between people living in Switzerland and the landscape that shaped them, *Swiss Landscapes II* presents a compact, artistic journey through the mountains, valleys, and rolling valleys, lakes and rivers of Switzerland.
