@@ -11,7 +11,7 @@ edition_size: 25
 price: "$2"
 year: 2026
 image: "/images/zines/hannover.jpg"
-video: "https://www.youtube.com/watch?v=Vw3yv5lN_bA&list=PLVqpKk7ob1yE&index=2&pp=iAQBsAgC"
+video: "https://www.youtube.com/shorts/-OXaH3QYdRQ"
 ---
 
 Having grown up near Hannover, I do have a difficult relationship with this city. It's exciting, boring; beautiful and ugly, big and small - the contrasts don't seem to stop.
