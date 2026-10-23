@@ -1,5 +1,5 @@
 ---
-title: "On The Go"
+title: "Hannover"
 description: "An 8-page A7 mini photo zine exploring Hannover and my difficult relationship with that city."
 pages: 8
 dimensions: "7.4 x 10.5 cm (A7)"
