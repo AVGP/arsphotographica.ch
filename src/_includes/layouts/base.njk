@@ -8,7 +8,15 @@
   <!-- SEO Metadata -->
   <meta name="description" content="{{ description | default(site.description) }}">
   <link rel="canonical" href="{{ site.url }}{{ page.url }}">
-  
+
+  <!-- Open Graph -->
+  <meta property="og:type"  content="article">
+  <meta property="og:title" content="{% if page.url == "/" %}{{ site.title }}{% else %}{{ title }} | {{ site.title }}{% endif %}">
+  <meta property="og:description" content="{{ description | default(site.description) }}">
+  <meta property="og:url"   content="{{ site.url }}{{ page.url }}">
+  <meta property="og:image" content="{%if image %}{{ site.url }}{{ image }}{% else %}{{ site.url }}/logo.jpg{% endif %}">
+  <meta name="twitter:card" content="summary_large_image">
+
   <!-- Favicon -->
   <link rel="icon" href="/favicon.ico" sizes="any">
   <link rel="icon" href="/images/favicon-32x32.png" type="image/png" sizes="32x32">
